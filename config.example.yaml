@@ -1,0 +1,34 @@
+# Global Services
+netbox:
+  url: "https://your-netbox-instance.com/"
+  token: "Bearer nbt_YOUR_NETBOX_API_TOKEN_HERE"
+
+ollama:
+  host: "http://192.168.1.245:11434"
+  model: "qwen2.5-coder:3b"
+
+# Multi-Vendor Device Inventory
+devices:
+  - name: "Core Router"
+    device_type: "cisco_ios"
+    host: "192.168.1.1"
+    username: "admin"
+    password: "YourSecurePassword"
+    command: "show version"
+    netbox_id: 1
+
+  - name: "Access Switch"
+    device_type: "cisco_ios"
+    host: "192.168.1.2"
+    username: "admin"
+    password: "YourSecurePassword"
+    command: "show version"
+    netbox_id: 2
+
+  - name: "Mobility Express WLC"
+    device_type: "cisco_wlc"
+    host: "192.168.1.3"
+    username: "admin"
+    password: "YourSecurePassword"
+    command: "show sysinfo"
+    netbox_id: 3
